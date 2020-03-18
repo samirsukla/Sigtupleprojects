@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+
+		<listener class-name="com.qa.utility.ExtentReporterNG" />
+
+	</listeners>
+	<test thread-count="5" name="Test" preserve-order="true">
+		<classes>
+			<class name="com.qa.logInOutTests.RequireLoginTest" />
+			<class name="com.qa.logInOutTests.WifiStatusTest" />
+			<class name="com.qa.logInOutTests.LogInTest" />
+			<class name="com.qa.ScanAndSlideInfo.ProductSelectionTest" />
+			<class name="com.qa.ScanAndSlideInfo.GetSlideStatusTest" />
+			<class name="com.qa.ScanAndSlideInfo.CreateSlideTest" />
+			<class name="com.qa.ScanAndSlideInfo.InsertSlideTest" />
+			<class name="com.qa.ScanAndSlideInfo.AutoScanTest" />
+			<class name="com.qa.ScanAndSlideInfo.GetScanInfoTest" />
+			
+			<class name="com.qa.ScanAndSlideInfo.GetScannerStateTest" />
+			
+			<class name="com.qa.ScanAndSlideInfo.StopScanTest" />
+			
+			<class name="com.qa.OQTest.RunOQPostTest" />
+			<class name="com.qa.OQTest.RunOQGetTest" />
+			<class name="com.qa.PQtest.PQTest" />
+			<class name="com.qa.QCTest.DailyQCTest" />
+			<class name="com.qa.QCTest.GetQCListTest" />
+			<class name="com.qa.miscellenious.ContactUsTest" />
+			<class name="com.qa.miscellenious.AboutUsTest" />
+			
+			<class name="com.qa.miscellenious.HomeAPITest" />
+			<class name="com.qa.logInOutTests.LogoutTest" />
+			
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

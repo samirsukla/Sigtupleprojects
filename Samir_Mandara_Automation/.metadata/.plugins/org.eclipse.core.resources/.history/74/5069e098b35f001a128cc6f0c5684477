@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Aadi">
+
+
+
+	<parameter name="browserType" value="chrome" />
+	<parameter name="url" value="https://qa.sigtuple.com/login" />
+
+	<!--List of Products : Shonit, Shrava, Aadi, Fundus, OCT, Digitizer -->
+	>
+	<parameter name="product" value="Aadi" />
+
+	<listeners>
+		<listener class-name="com.utilities.ScreenshotListeners" />
+	</listeners>
+
+	<test name="Mandara_Test">
+		<classes>
+			<class name="com.Common.HappyLoginTest" />
+			<class name="com.Common.HappyListReportTest" />	
+			<class name="com.Aadi.AadiListReportTest" />
+			<!-- <class name="com.Aadi.AadiReportPageTest" /> -->	
+			<class name="com.Common.HappyReportPageTest" />
+			
+			<class name="com.Aadi.PhysicalTabPageTest" />
+			<class name="com.Aadi.MotilityTabPageTest" />
+			<class name="com.Aadi.SummaryTabPageTest" /> 
+			<class name="com.Aadi.ManualInfTabPageTest" />
+
+		</classes>
+	</test>
+</suite>

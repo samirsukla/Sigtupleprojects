@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="OCT-Common">
+
+    <!--Below two parameters are used for launch browser and open the url -->>
+
+    <parameter name="browserType" value="chrome"/>
+    <parameter name="url" value="https://qa.sigtuple.com/login"/>
+ 
+   <!--List of Products : Shonit, Shrava, Aadi, Fundus, OCT, Digitizer -->>
+    <parameter name="product" value="OCT"/>
+
+    <listeners>
+        <listener class-name="com.utilities.ScreenshotListeners"/>
+    </listeners>
+
+    <test name="Mandara_Test">
+        <classes>
+            <class name="com.Common.HappyLoginTest"/>
+            <class name="com.Common.ListReportTest"/>
+            <class name="com.drishti.ImageUploadTest"/>
+            <class name="com.Common.SearchFilterTest" />
+			<class name="com.Common.ReportPageTest"/>
+			
+			<class name="com.OCT.OCTCommentTest"/>
+            <class name="com.drishti.SampleRejectTest"/>
+            <class name="com.drishti.SampleApproveTest"/>
+            
+           	<class name="com.Common.ReportPageUnassignedUserTest"/>
+            
+        </classes>
+    </test>
+</suite>
+

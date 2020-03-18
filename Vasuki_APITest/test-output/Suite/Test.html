@@ -1,0 +1,179 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>20/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Nov 13 15:17:42 IST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>70 seconds (70653 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.qa.logInOutTests.LogInTest.logInTest()'><b>logInTest</b><br>Test class: com.qa.logInOutTests.LogInTest</td>
+<td></td>
+<td>12</td>
+<td>com.qa.logInOutTests.LogInTest@185d8b6</td></tr>
+<tr>
+<td title='com.qa.miscellenious.AboutUsTest.testAboutUs()'><b>testAboutUs</b><br>Test class: com.qa.miscellenious.AboutUsTest</td>
+<td></td>
+<td>0</td>
+<td>com.qa.miscellenious.AboutUsTest@7791a895</td></tr>
+<tr>
+<td title='com.qa.ScanAndSlideInfo.AutoScanTest.testAutoScan()'><b>testAutoScan</b><br>Test class: com.qa.ScanAndSlideInfo.AutoScanTest</td>
+<td></td>
+<td>0</td>
+<td>com.qa.ScanAndSlideInfo.AutoScanTest@2b2948e2</td></tr>
+<tr>
+<td title='com.qa.miscellenious.ContactUsTest.testContactUs()'><b>testContactUs</b><br>Test class: com.qa.miscellenious.ContactUsTest</td>
+<td></td>
+<td>0</td>
+<td>com.qa.miscellenious.ContactUsTest@7d907bac</td></tr>
+<tr>
+<td title='com.qa.ScanAndSlideInfo.CreateSlideTest.testCreateSlide()'><b>testCreateSlide</b><br>Test class: com.qa.ScanAndSlideInfo.CreateSlideTest</td>
+<td></td>
+<td>0</td>
+<td>com.qa.ScanAndSlideInfo.CreateSlideTest@210366b4</td></tr>
+<tr>
+<td title='com.qa.QCTest.DailyQCTest.testDailyQC()'><b>testDailyQC</b><br>Test class: com.qa.QCTest.DailyQCTest</td>
+<td></td>
+<td>0</td>
+<td>com.qa.QCTest.DailyQCTest@369f73a2</td></tr>
+<tr>
+<td title='com.qa.miscellenious.HomeAPITest.testHomeAPI()'><b>testHomeAPI</b><br>Test class: com.qa.miscellenious.HomeAPITest</td>
+<td></td>
+<td>26</td>
+<td>com.qa.miscellenious.HomeAPITest@3a5ed7a6</td></tr>
+<tr>
+<td title='com.qa.ScanAndSlideInfo.InsertSlideTest.testInsertSlide()'><b>testInsertSlide</b><br>Test class: com.qa.ScanAndSlideInfo.InsertSlideTest</td>
+<td></td>
+<td>0</td>
+<td>com.qa.ScanAndSlideInfo.InsertSlideTest@eec5a4a</td></tr>
+<tr>
+<td title='com.qa.logInOutTests.LogoutTest.testLogout()'><b>testLogout</b><br>Test class: com.qa.logInOutTests.LogoutTest</td>
+<td></td>
+<td>0</td>
+<td>com.qa.logInOutTests.LogoutTest@6325a3ee</td></tr>
+<tr>
+<td title='com.qa.PQtest.PQTest.testPQ()'><b>testPQ</b><br>Test class: com.qa.PQtest.PQTest</td>
+<td></td>
+<td>0</td>
+<td>com.qa.PQtest.PQTest@731a74c</td></tr>
+<tr>
+<td title='com.qa.ScanAndSlideInfo.ProductSelectionTest.testProductSelection()'><b>testProductSelection</b><br>Test class: com.qa.ScanAndSlideInfo.ProductSelectionTest</td>
+<td></td>
+<td>3</td>
+<td>com.qa.ScanAndSlideInfo.ProductSelectionTest@67784306</td></tr>
+<tr>
+<td title='com.qa.QCTest.GetQCListTest.testQCList()'><b>testQCList</b><br>Test class: com.qa.QCTest.GetQCListTest</td>
+<td></td>
+<td>0</td>
+<td>com.qa.QCTest.GetQCListTest@1f28c152</td></tr>
+<tr>
+<td title='com.qa.logInOutTests.RequireLoginTest.testRequireLogin()'><b>testRequireLogin</b><br>Test class: com.qa.logInOutTests.RequireLoginTest</td>
+<td></td>
+<td>1</td>
+<td>com.qa.logInOutTests.RequireLoginTest@6c3708b3</td></tr>
+<tr>
+<td title='com.qa.OQTest.RunOQGetTest.testRunQC()'><b>testRunQC</b><br>Test class: com.qa.OQTest.RunOQGetTest</td>
+<td></td>
+<td>0</td>
+<td>com.qa.OQTest.RunOQGetTest@4b4523f8</td></tr>
+<tr>
+<td title='com.qa.OQTest.RunOQPostTest.testRunQCPost()'><b>testRunQCPost</b><br>Test class: com.qa.OQTest.RunOQPostTest</td>
+<td></td>
+<td>0</td>
+<td>com.qa.OQTest.RunOQPostTest@5a8e6209</td></tr>
+<tr>
+<td title='com.qa.ScanAndSlideInfo.GetScanInfoTest.testScanInfo()'><b>testScanInfo</b><br>Test class: com.qa.ScanAndSlideInfo.GetScanInfoTest</td>
+<td></td>
+<td>0</td>
+<td>com.qa.ScanAndSlideInfo.GetScanInfoTest@6ddf90b0</td></tr>
+<tr>
+<td title='com.qa.ScanAndSlideInfo.GetScannerStateTest.testScannerState()'><b>testScannerState</b><br>Test class: com.qa.ScanAndSlideInfo.GetScannerStateTest</td>
+<td></td>
+<td>0</td>
+<td>com.qa.ScanAndSlideInfo.GetScannerStateTest@57536d79</td></tr>
+<tr>
+<td title='com.qa.ScanAndSlideInfo.GetSlideStatusTest.testSlideStatus()'><b>testSlideStatus</b><br>Test class: com.qa.ScanAndSlideInfo.GetSlideStatusTest</td>
+<td></td>
+<td>0</td>
+<td>com.qa.ScanAndSlideInfo.GetSlideStatusTest@335eadca</td></tr>
+<tr>
+<td title='com.qa.ScanAndSlideInfo.StopScanTest.testStopScan()'><b>testStopScan</b><br>Test class: com.qa.ScanAndSlideInfo.StopScanTest</td>
+<td></td>
+<td>24</td>
+<td>com.qa.ScanAndSlideInfo.StopScanTest@3b0143d3</td></tr>
+<tr>
+<td title='com.qa.logInOutTests.WifiStatusTest.testWifiStatus()'><b>testWifiStatus</b><br>Test class: com.qa.logInOutTests.WifiStatusTest</td>
+<td></td>
+<td>1</td>
+<td>com.qa.logInOutTests.WifiStatusTest@6f1fba17</td></tr>
+</table><p>
+</body>
+</html>

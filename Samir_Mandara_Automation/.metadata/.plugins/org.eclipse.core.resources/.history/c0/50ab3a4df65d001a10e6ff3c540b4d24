@@ -1,0 +1,126 @@
+
+productlistreport1=//div[@class='container']//mat-card//div/h2[contains(text(),'
+productlistreport2=')]//parent::div//following-sibling::div//button
+Environment=qa
+
+capturedimages=//*[contains(text(),'Images Captured')]//following-sibling::mat-card-content
+------------------------------------- Report Page ---------------------------------------------
+checkReportPage=.analysis-reports
+currentselectedtab=//div[@class='mat-tab-labels']//div[@aria-selected='true']/div[not(contains(text(),'Eye'))]
+
+cardonReportpage=.mat-card
+sampledetailheader=//div[@class='view-status']//div[not(contains(@style,'none'))]//mat-card-subtitle[@class='mat-card-subtitle' or contains(text(),'Version')]
+selectedsampledetail=//div[@class='view-status']//mat-card-subtitle[@class='mat-card-subtitle' and not(contains(text(),'Captured'))]//following-sibling::mat-card-content
+
+Shonitheadersdata=Slide ID,Description,Smear Type,Stain Type,Product Version,Submitted By,Submitted At,Reviewer,Version,
+Shravaheadersdata=Slide ID,Description,Slide Type,Product Version,Submitted By,Submitted At,Reviewer,Version,
+Fundusheadersdata=Case ID,Description,Product Version,Submitted By,Submitted At,Reviewer,Version,
+OCTheadersdata=Case ID,Description,Product Version,Submitted By,Submitted At,Reviewer,Version,
+Aadiheadersdata=Sample ID,Description,Product Version,Submitted By,Submitted At,Reviewer,Version,
+Digitizerheadersdata=Case ID,Description,Resolution,Test Type,Sample Type,Product Version,Submitted By,Submitted At,Reviewer,
+
+
+backtolist=.back-to-list>span:nth-child(2)
+backtolistdata=Back to List Reports
+desclaimer=//strong[contains(text(),'Disclaimer')]//parent::p
+
+Shonitdisclaimerdata=Disclaimer : This report is meant for review and subsequent approval from a certified pathologist. Under no circumstances shall this report be provided to the patient without the approval from a certified pathologist.
+Shravadisclaimerdata=Disclaimer : This report is meant for review and subsequent approval from a certified pathologist. Under no circumstances shall this report be provided to the patient without the approval from a certified pathologist.
+Digitizerdisclaimerdata=Disclaimer : This report is meant for review and subsequent approval from a certified pathologist. Under no circumstances shall this report be provided to the patient without the approval from a certified pathologist.
+Fundusdisclaimerdata=Disclaimer : This report is meant for review and subsequent approval from a certified opthalmologist. Under no circumstances shall this report be provided to the patient without the approval from a certified opthalmologist.
+OCTdisclaimerdata=Disclaimer : This report is meant for review and subsequent approval from a certified opthalmologist. Under no circumstances shall this report be provided to the patient without the approval from a certified opthalmologist.
+Aadidisclaimerdata=Disclaimer : This report is meant for review and subsequent approval from a certified Pathologist/Andrologist. Under no circumstances shall this report be provided to the patient without the approval from a certified Pathologist/Andrologist.
+
+alltabs=mat-tab-header.mat-tab-header
+
+Shonittabs=Summary\nWBC\nRBC\nPlatelet\nVisuals\nMicroscopic View\nQuality Assessment
+Shravatabs=Summary\nMicroscopic View\nQuality Assessment
+Fundustabs=Summary\nDR\nGlaucoma\nAMD
+OCTtabs=Right Eye\nLeft Eye\nSummary
+Digitizertabs=FOVs\nComments\nSummary
+Aaditabs=Physical\nMotility/Concentration\nManual Inference\nSummary
+
+statuscontainer=section.status-container
+statuscontainerdata=Reference\nAbnormal\nNormal
+statuscontainercolordata=blue-status red-status black-status 
+
+version=//div[@class='view-status']//mat-card-subtitle[contains(.,'Version')]//following-sibling::mat-card-content//mat-select
+versionoriginal=//mat-option[contains(.,'Original')]
+
+sample_id=//mat-card-subtitle[contains(text(),'Id')]//following-sibling::mat-card-content
+sample_des=//mat-card-subtitle[contains(text(),'Description')]//following-sibling::mat-card-content
+sample_date=//mat-card-subtitle[contains(text(),'Submitted At')]//following-sibling::mat-card-content
+num_of_scans=//mat-card-subtitle[contains(text(),'Images Captured')]//following-sibling::mat-card-content
+
+export=//div[@id='export-div']/button
+listofexportoptions=//div[@class='mat-menu-content']
+listofexportoptions_data=XLS\nCSV
+------------------------------------- Summary Tab ---------------------------------------------
+
+metricstab=//div[contains(@class,'mat-tab-labels')]//div[contains(text(),'Summary')]
+tabelsnames=External Metrics,Shonit Reported Metrics,Shonit PS Impression,
+
+metricstables=section.ng-star-inserted > app-report-table:nth-child(1) > div:nth-child(1) > div:nth-child(1)
+
+Externalheaders=//*[contains(text(),'External Metrics')]//following-sibling::table/thead/tr/th
+Externalheaderdata=Name,Value,Unit,Correction,
+Externalrows=//*[contains(text(),'External Metrics')]//following-sibling::table/tbody/tr
+Externalrowsdata=NEUT%;LYM%;MONO%;EOS%;BASO%;ATYPS;Blast%;WBC;RBC;PLT;HGB;HCT;MCV;MCH;MCHC;RDW-CV;RDW-SD;PCT;PDW;MPV;LYM#;MXD#;MXD%;NEUT#;P-LCR;HDW;MONO#;BASO#;EOS#;CHCM;CH;LUC#;LUC%;HYPO%;HYPER%;MACRO%;MICRO%;NRBC%;NRBC#;MPC;MPM;HYPO;LARGE_PLT;ANISO;MICRO;MACRO;PLT_CLUMPS;WBCP#;LEFT_SHIFT;Large_Plt#;RBC_Ghost#;RBC_Fragments#;
+
+Shonitheaders=//*[contains(text(),'Shonit Reported')]//following-sibling::table/thead/tr/th
+Shonitheaderdata=Name,Value,Ref,Unit,Correction,
+Shonitrows=//*[contains(text(),'Shonit Reported')]//following-sibling::table/tbody/tr
+Shonitrowsdata=NEUT;LYMPH;MONO;EO;BASO;IG;Atypical/Blast;WBC TC;RBC TC;PLATELET TC;Comments;
+
+------------------------------------- WBC Tab ---------------------------------------------
+
+wbctab=//div[contains(@class,'mat-tab-labels')]//div[contains(text(),'WBC')]
+wbctabelsnames=WBC Absolute CountsReported Metrics
+
+wbcabsolute=section.ng-star-inserted:nth-child(2) > app-report-table:nth-child(1) > div:nth-child(1) > div:nth-child(1)
+reportedmetrics=section.ng-star-inserted:nth-child(3) > app-report-table:nth-child(1) > div:nth-child(1) > div:nth-child(1)
+
+wbcheader=section.ng-star-inserted:nth-child(2) > app-report-table:nth-child(1) > div:nth-child(1) > table:nth-child(2) > thead:nth-child(1) > tr:nth-child(1)
+wbcheaders=//*[contains(text(),'WBC Absolute Counts')]//following-sibling::table/thead/tr/th
+wbcheaderdata=Name Count Percentage Images
+wbcrows= //*[contains(text(),'WBC Absolute Counts')]//following-sibling::table/tbody/tr
+wbcrowsdata=NEUT;LYMPH;MONO;EO;BASO;IG *;Atypical/Blast *;TOTAL;NRBC *;Unclassified;Rejected;
+
+reportedheader=section.ng-star-inserted:nth-child(3) > app-report-table:nth-child(1) > div:nth-child(1) > table:nth-child(2) > thead:nth-child(1)> tr:nth-child(1)
+reportedheaders=//*[contains(text(),'Reported Metrics')]//following-sibling::table/thead/tr/th
+reportedheaderdata=Name Value Ref Unit Percentage
+reportedrows= //*[contains(text(),'Reported Metrics')]//following-sibling::table/tbody/tr
+reportedrowsdata=NEUT;LYMPH;MONO;EO;BASO;
+
+Rwbcabsolute=//app-report-table//div[contains(text(),'WBC Absolute Counts')]//following-sibling::table/thead/tr/th
+Dwbcabsolute=//app-report-table//div[contains(text(),'WBC Absolute Counts')]//following-sibling::table/tbody/tr
+Dreportmetrics=//app-report-table//div[contains(text(),'Reported Metrics')]//following-sibling::table//tr
+
+patchheader = .img-container > app-report-table-patches:nth-child(1) > div:nth-child(1)
+listofpatches=#ShonitImages>div
+totalpatch=div.mat-paginator-range-label
+
+refimgheader = .img-container > app-report-table-patches:nth-child(1) > div:nth-child(5) > div:nth-child(1)
+refimages= #ShonitRefImages>div
+
+
+------------------------------------- Platelet Tab ---------------------------------------------
+
+plttab=//div[contains(@class,'mat-tab-labels')]//div[contains(text(),'Platelet')]
+plttabelsnames=Platelet Absolute CountsPlatelet Diameter
+
+pltabsolute= section.ng-star-inserted:nth-child(3) > app-report-table:nth-child(1) > div:nth-child(1) > div:nth-child(1)
+pltdiameter=section.ng-star-inserted:nth-child(4) > app-report-table:nth-child(1) > div:nth-child(1) > div:nth-child(1)
+
+pltheader=section.ng-star-inserted:nth-child(3) > app-report-table:nth-child(1) > div:nth-child(1) > table:nth-child(2) > thead:nth-child(1) > tr:nth-child(1)
+pltheaders=//*[contains(text(),'Platelet Absolute Counts')]//following-sibling::table/thead/tr/th
+pltheaderdata=Name Count Percentage Grade Images
+pltrows=//*[contains(text(),'Platelet Absolute Counts')]//following-sibling::table/tbody/tr
+pltrowsdata=Platelet;Large Platelet;TOTAL;Platelet Clump;
+
+diameterheader=section.ng-star-inserted:nth-child(4) > app-report-table:nth-child(1) > div:nth-child(1) > table:nth-child(2) > thead:nth-child(1) > tr:nth-child(1)
+diameterheaderdata=Mean Ref Unit Std Dev Ref Unit
+diameterrows=section.ng-star-inserted:nth-child(4) > app-report-table:nth-child(1) > div:nth-child(1) > table:nth-child(2) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(1) > span:nth-child(1)
+diameterrowsdata=
+
+
